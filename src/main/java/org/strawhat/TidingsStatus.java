@@ -17,8 +17,6 @@
 
 package org.strawhat;
 
-import com.sun.istack.internal.Nullable;
-
 /**
  *  拷贝自 {@link org.springframework.http.HttpStatus}.
  *  版权归 springframework 所有
@@ -556,7 +554,7 @@ public enum TidingsStatus {
      * @return the corresponding {@code HttpStatus}, or {@code null} if not found
      * @since 5.0
      */
-    @Nullable
+
     public static TidingsStatus resolve(int statusCode) {
         for (TidingsStatus status : values()) {
             if (status.value == statusCode) {
@@ -622,7 +620,7 @@ public enum TidingsStatus {
          * @return the corresponding {@code Series}, or {@code null} if not found
          * @since 5.1.3
          */
-        @Nullable
+
         public static Series resolve(int statusCode) {
             int seriesCode = statusCode / 100;
             for (Series series : values()) {
